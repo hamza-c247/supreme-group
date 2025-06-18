@@ -5,9 +5,15 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 
 
-Node Version Required- Above 18
+1. Node Version Required- Above 18
+ 
+Deployed URL- https://supreme-group-beta.vercel.app/
 
-To start project Open console and run npm install command
+Public GITHUB URL of supreme-group task- https://github.com/hamza-c247/supreme-group.git  
+
+To start the project download the supreme-group project folder in you computer Open console and run npm install command
+
+Start the Development server once the dependencies has been installed- use command npm run dev to start local server.Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
 2. Component Architecture Overview
@@ -100,17 +106,5 @@ Tried implementing all the features but missed out on a few due to time constrai
 
 
 
-First, run the development server:
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
