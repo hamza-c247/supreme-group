@@ -8,6 +8,7 @@ const VideoBanner = () => {
               loop
               muted
               playsInline
+              preload="none"
               className="absolute top-0 left-0 w-full h-full object-cover z-0"
             >
               <source src="/automotive.mp4" type="video/mp4" />
@@ -28,7 +29,6 @@ const VideoBanner = () => {
               </h1>
             </div>
           </div>
-    
   )
 }
 

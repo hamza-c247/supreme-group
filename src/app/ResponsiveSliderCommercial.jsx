@@ -1,5 +1,4 @@
 import React from "react";
-import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -43,11 +42,11 @@ const ResponsiveSliderCommercial = () =>  {
                  loop
                  muted
                  playsInline
+                 preload="none"
                  className=""
                >
                  <source src="/Commercial1.mp4" type="video/mp4" />
                  Your browser does not support the video tag.
-                 
                </video>
                  <span className="text-white block  pb-10 text-center text-sm">Complete body</span>
                </SwiperSlide>
@@ -57,6 +56,7 @@ const ResponsiveSliderCommercial = () =>  {
                  loop
                  muted
                  playsInline
+                 preload="none"
                  className=""
                >
                  <source src="/Commercial2.mp4" type="video/mp4" />
@@ -70,6 +70,7 @@ const ResponsiveSliderCommercial = () =>  {
                  loop
                  muted
                  playsInline
+                 preload="none"
                  className=""
                >
                  <source src="/Commercial3.mp4" type="video/mp4" />

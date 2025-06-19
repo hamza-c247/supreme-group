@@ -1,7 +1,6 @@
 import { useState } from "react";
 import ResponsiveSliderPassenger from "./ResponsiveSliderPassenger";
 import ResponsiveSliderCommercial from "./ResponsiveSliderCommercial";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,8 +9,8 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import SwiperTruck from "./SwiperTruck";
+import SwiperPassenger from "./SwiperPassenger";
 
 const ProductDetails = () => {
   const tabs = [
@@ -24,7 +23,6 @@ const ProductDetails = () => {
       content: "Advancing engineering for heavy-duty vehicles.",
     },
   ];
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [activeTab, setActiveTab] = useState("Passenger vehicles");
 
   return (
@@ -38,7 +36,6 @@ const ProductDetails = () => {
             comprehensive solutions
           </h2>
         </div>
-
         <div className="md:hidden block">
           <span className="text-[#5CD6FF] block text-center text-xl py-6">
             Passenger vehicles
@@ -48,7 +45,6 @@ const ProductDetails = () => {
           </span>
           <ResponsiveSliderPassenger />
         </div>
-
         <div className="md:hidden block">
           <span className="text-[#5CD6FF] block text-center text-xl py-6">
             Commercial vehicles
@@ -58,9 +54,7 @@ const ProductDetails = () => {
           </span>
           <ResponsiveSliderCommercial />
         </div>
-
         <div className="md:flex lg:flex hidden flex flex-col md:flex-row justify-around ml-[4%] ">
-          {/* Tabs List */}
           <div className="w-full h-full md:w-1/4   p-4 space-y-3">
             {tabs?.map((tab, index) => (
               <button
@@ -76,100 +70,17 @@ const ProductDetails = () => {
                   {tab.title}
                 </h3>
                 <h6 className="text-lg pl-15 pt-5">{tab.content}</h6>
-                {console.log(activeTab, "act")}
               </button>
             ))}
           </div>
-          {/* Tab Content */}S
           <div className=" md:w-[900px] md:h-auto p-6 ">
             <div
               className={`${
                 activeTab === "Passenger vehicles" ? "block" : "hidden"
               }`}
             >
-              <Swiper
-                style={{
-                  "--swiper-navigation-color": "#fff",
-                  "--swiper-pagination-color": "#fff",
-                }}
-                spaceBetween={10}
-                navigation={false}
-                thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className="mySwiper2"
-              >
-                <SwiperSlide>
-                  <video autoPlay loop muted playsInline className="">
-                    <source src="/car.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <video autoPlay loop muted playsInline className="">
-                    <source src="/Front.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <video autoPlay loop muted playsInline className="">
-                    <source src="/interior.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <video autoPlay loop muted playsInline className="">
-                    <source src="/trunk.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <video autoPlay loop muted playsInline className="">
-                    <source src="/Exterior.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                </SwiperSlide>
-              </Swiper>
-              <Swiper
-                onSwiper={setThumbsSwiper}
-                spaceBetween={10}
-                slidesPerView={4}
-                watchSlidesProgress={true}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className="mySwiper"
-              >
-                <SwiperSlide>
-                  <img
-                    className="opacity-50 hover:opacity-100 cursor-pointer h-20"
-                    src="/cabin.png"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    className="opacity-50 hover:opacity-100 cursor-pointer h-20"
-                    src="/view 1.png"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    className="opacity-50 hover:opacity-100 cursor-pointer h-20"
-                    src="/view 2.png"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    className="opacity-50 hover:opacity-100 cursor-pointer h-20"
-                    src="/view 3.png"
-                  />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img
-                    className="opacity-50 hover:opacity-100 cursor-pointer h-20"
-                    src="/view 1.png"
-                  />
-                </SwiperSlide>
-              </Swiper>
+             <SwiperPassenger/>
             </div>
-
             <div
               className={`${
                 activeTab === "Commercial vehicles" ? "block" : "hidden"

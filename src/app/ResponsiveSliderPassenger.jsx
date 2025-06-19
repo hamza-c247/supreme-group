@@ -1,5 +1,4 @@
 import React from "react";
-import { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -13,7 +12,6 @@ import { Pagination } from "swiper/modules";
 const ResponsiveSliderPassenger = () => {
   return (
     <>
-      {" "}
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -38,38 +36,35 @@ const ResponsiveSliderPassenger = () => {
         className="PassengerSwiper"
       >
         <SwiperSlide>
-          <video autoPlay loop muted playsInline className="">
+          <video autoPlay loop muted playsInline preload="none" className="">
             <source src="/car.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <span className="text-white block  py-10 text-center text-sm">Complete body</span>
         </SwiperSlide>
         <SwiperSlide>
-          <video autoPlay loop muted playsInline className="">
+          <video autoPlay loop muted playsInline preload="none" className="">
             <source src="/Front.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <span className="text-white block  py-10 text-center text-sm">Front</span>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <video autoPlay loop muted playsInline className="">
+          <video autoPlay loop muted playsInline preload="none" className="">
             <source src="/interior.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
            <span className="text-white block  py-10 text-center text-sm">Cabin</span>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <video autoPlay loop muted playsInline className="">
+          <video autoPlay loop muted playsInline preload="none" className="">
             <source src="/trunk.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
            <span className="text-white block  py-10 text-center text-sm">Trunk</span>
         </SwiperSlide>
         <SwiperSlide>
-          {" "}
-          <video autoPlay loop muted playsInline className="">
+          <video autoPlay loop muted playsInline preload="none" className="">
             <source src="/Exterior.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>

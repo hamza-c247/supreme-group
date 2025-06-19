@@ -1,10 +1,13 @@
 "use client";
 
-import GetInTouch from "./GetInTouch";
-import Header from "./Header";
-import VideoBanner from "./VideoBanner";
-import ProductDetails from "./ProductDetails";
-import Footer from "./Footer";
+import dynamic from "next/dynamic";
+
+// Client Components:
+const Header = dynamic(() => import("./Header"));
+const VideoBanner = dynamic(() => import("./VideoBanner"));
+const ProductDetails = dynamic(() => import("./ProductDetails"));
+const GetInTouch = dynamic(() => import("./GetInTouch"));
+const Footer = dynamic(() => import("./Footer"));
 
 export default function ParallaxTabs() {
   return (

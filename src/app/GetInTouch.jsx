@@ -13,7 +13,6 @@ export default function GetInTouch() {
     company: "",
     message: "",
   });
-
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -36,7 +35,6 @@ export default function GetInTouch() {
 
     if (Object.keys(tempErrors).length === 0) {
       alert("Form submitted!");
-      // Handle form submission logic here (e.g. send to API)
       setForm({ name: "", email: "", company: "", message: "" });
     }
   };
@@ -45,7 +43,6 @@ export default function GetInTouch() {
     <section className="bg-white " id="contact">
       <div className="w-full bg-[#0067B1] md:px-20 md:py-30 py-15 px-5">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10">
-          {/* Contact Info - left on desktop,  ottom on mobile */}
           <div className="w-full md:w-1/2 space-y-4 text-gray-700 order-2 md:order-1">
             <h1 className="md:text-5xl md:block lg:text-5xl lg:block hidden text-2xl  font-semibold mb-4 text-white pt-4">
               Get in Touch
@@ -62,17 +59,15 @@ export default function GetInTouch() {
               <strong>Phone:</strong> <br></br> +91 22 25208822
             </p>
             <p className="md:text-lg text-medium text-white ">
-              <strong>Email:</strong><br></br> info@supremegroup.co.in
+              <strong>Email:</strong>
+              <br></br> info@supremegroup.co.in
             </p>{" "}
           </div>
-
-          {/* Form - right on desktop, top on mobile */}
           <div className="w-full md:w-1/2 order-1 md:order-2">
             <h1 className="md:text-5xl md:hidden lg:text-5xl lg:hidden  text-2xl  font-semibold mb-4 text-white pt-4">
               Get in Touch
             </h1>
             <div className="h-[2px] md:hidden lg:hidden w-12 bg-white my-3 md:my-5 lg:my-6 2xl:my-8"></div>
-            {/* Right - Form */}
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <input
@@ -129,7 +124,6 @@ export default function GetInTouch() {
                   <p className="text-sm text-red-600 mt-1">{errors.message}</p>
                 )}
               </div>
-
               <button
                 type="submit"
                 className="text-white bg-[#0067B1] w-full md:w-auto px-10 py-3 rounded-full border-1  hover:bg-white hover:text-black transition-all duration-700 ease-in-out cursor-pointer"

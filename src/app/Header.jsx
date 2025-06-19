@@ -1,10 +1,12 @@
 "use-client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import Logo from "../../public/logo.png"
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
-const lastScroll = useRef(0);
+  const lastScroll = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,7 +29,11 @@ const lastScroll = useRef(0);
       } bg-white shadow-md`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <img className="text-xl font-bold text-gray-800 " src="/logo.png" />
+        <Image
+          className="text-xl font-bold text-gray-800 "
+          src={Logo}
+          alt="logo.png"
+        />
       </div>
     </div>
   );

@@ -1,11 +1,13 @@
 import React from 'react'
+import Image from "next/image";
+import Link from 'next/link'
+import Logo from "../../public/logo.png"
 
 const Footer = () => {
   return (
     <footer className="bg-white text-white md:py-25 py-10 px-6 bg-[url('/footer.jpg')] bg-cover bg-center bg-no-repeat text-white py-10 px-6">
       <div className="md:pl-50 pb-10 ">
-        {" "}
-        <img src="/logo.png" />
+        <Image src={Logo} alt="logo.png"/>
       </div>
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 justify-center">
         <div className="md:pl-12 text-gray">
@@ -14,24 +16,24 @@ const Footer = () => {
           </h3>
           <ul className="space-y-2  text-gray-600 text-base">
             <li className="py-5">
-              <a href="#" className="hover:text-black ">
+              <Link href="#" className="hover:text-black ">
                 Apparel
-              </a>
+              </Link>
             </li>
             <li className="pb-5">
-              <a href="#" className="hover:text-black ">
+              <Link href="#" className="hover:text-black ">
                 Automotive
-              </a>
+              </Link>
             </li>
             <li className="pb-5">
-              <a href="#" className="hover:text-black">
+              <Link href="#" className="hover:text-black">
                 Filtration
-              </a>
+              </Link>
             </li>
             <li className="pb-5">
-              <a href="#" className="hover:text-black ">
+              <Link href="#" className="hover:text-black ">
                 Customised Nonwoven
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -39,24 +41,24 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4 text-black">COMPANY</h3>
           <ul className="space-y-2 text-gray-600 text-base">
             <li className="py-5">
-              <a href="#" className="hover:text-black ">
+              <Link href="#" className="hover:text-black ">
                 Who We Are
-              </a>
+              </Link>
             </li>
             <li className="pb-5">
-              <a href="#" className="hover:text-black ">
+              <Link href="#" className="hover:text-black ">
                 Global Compentency
-              </a>
+              </Link>
             </li>
             <li className="pb-5">
-              <a href="#" className="hover:text-black ">
+              <Link href="#" className="hover:text-black ">
                 Innovation
-              </a>
+              </Link>
             </li>
             <li className="pb-5">
-              <a href="#" className="hover:text-black ">
+              <Link href="#" className="hover:text-black ">
                 ESG Impact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -64,14 +66,14 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4 text-black">MORE</h3>
           <ul className="space-y-2  text-gray-600 text-base">
             <li className="py-5">
-              <a href="#" className="hover:text-black ">
+              <Link href="#" className="hover:text-black ">
                 Contact Us
-              </a>
+              </Link>
             </li>
             <li className="pb-5">
-              <a href="#" className="hover:text-black ">
+              <Link href="#" className="hover:text-black ">
                 Careers
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -79,9 +81,9 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4 text-black ">FOLLOW US</h3>
           <ul className="space-y-2  text-gray-600 text-base">
             <li className="py-5">
-              <a href="#" className="hover:text-black ">
+              <Link href="#" className="hover:text-black ">
                 LinkedIn
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
